@@ -15,7 +15,12 @@ function App (){
       try{
         const response = await fetch('https://www.reddit.com/subreddits.json');
         const data = await response.json();
-        const subredditList = data.data.children.map(child => child.data.display_name)
+        const subredditList = data.data.children.map(child => ({
+          displayName: child.data.display_name,
+          title: child.data.title,
+          url:child.data.url
+
+        }))
         setSubReddits(subredditList);
       } catch(error){
         console.log("Error fetching subreddits", error);
