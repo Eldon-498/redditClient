@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import './App.css'
+import Home from './components/home/Home';
 
 function App (){
 
@@ -33,13 +34,9 @@ function App (){
 
    return ( 
     <>
-    <h1>HelloReddit</h1>
-    <ul>
-       {data.map((data) => {
-         return <li key={data.id}>{data.title}</li>;
-       })}
-     </ul>
+    <Home />
      </>
+     
      );
 
 
