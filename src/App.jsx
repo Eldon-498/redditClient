@@ -5,31 +5,22 @@ import Home from './components/home/Home';
 
 function App (){
 
-  const [data, setData] = useState([]);
+    const [subReddits, setSubReddits] = useState([]);
 
-  useEffect(()=>{
-    fetch('https://www.reddit.com/subreddits.json').
-    then((response)=> {
-      if(!response.ok){
-        throw new Error('Network response was not ok');
+    useEffect(()=>{
+
+    }, []);
+
+    const fetchSubreddits = async () =>{
+      try{
+        const response = await fetch('https://www.reddit.com/subreddits.json');
+        const data = await response.json();
+        const subredditList = data.data.children.map(child => child.data.display_name)
+        setSubReddits(subredditList);
+      } catch(error){
+        console.log("Error fetching subreddits", error);
       }
-      
-      return response.json();
-      //response.json;
-    })
-    .then((data) => {
-      console.log(data.data.children);
-      const topPosts = data.data.children.map((posts)=> posts.data);
-      setData(topPosts);
-
-     
-      }).
-    catch((error) =>{
-      console.log("Error fecthing data");
-      throw error;
-    });
-    
-  },[]);
+    }
 
 
    return ( 
