@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './home.css';
-
 import Post from '../post/Post';
 import usePosts from '../../hooks/usePosts';
 import useSubreddits from '../../hooks/useSubreddits';
@@ -16,13 +15,18 @@ const Home = () => {
     }
 
     return (  
-        <div className="home-container">
+      <div className="home-container">
         <h1 className="home-title">Reddit Client</h1>
         <div className='content'>
+          <div className='subreddit-list-container'>
         <SubredditList subreddits = {subReddits} onSubredditClick={handleSubredditClick}/>
+          </div>
+        <div className='post-container'>
         {selectedSubreddit && topPosts.length > 0 && <Post post={topPosts[0]} />}
         </div>
+        
         </div>
+      </div>
     );
 }
  

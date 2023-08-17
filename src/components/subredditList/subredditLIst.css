@@ -1,19 +1,35 @@
-.subreddit-list {
-    flex: 1;
-    padding: 10px;
-    background-color: #f0f0f0;
-  }
-  
   .subreddit-list h2 {
+    font-size: 18px;
     margin-bottom: 10px;
   }
   
   .subreddit-list ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
   .subreddit-list li {
     margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .subreddit-list button {
+    display: block;
+    width: 100%; /* Set a fixed width for the buttons */
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;/* Truncate long titles with ellipsis */
+    transition: none;
+    position: relative;
+  }
+  .subreddit-list button:hover {
+    background-color: #ddd;     
+    
   }
   
