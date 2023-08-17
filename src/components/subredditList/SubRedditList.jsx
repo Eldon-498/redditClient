@@ -4,7 +4,7 @@ import './subredditList.css';
 const SubredditList = ({ subreddits, onSubredditClick }) => {
     return ( 
         <>
-        <h2 >Subreddits</h2>
+        
         <div className='subreddit-list'>
             
             <ul className='subreddit-list'>

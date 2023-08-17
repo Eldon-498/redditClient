@@ -1,12 +1,20 @@
 .home-container {
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: gray;
+  height: 100vh;
 }
 
 .home-title {
-  margin-top: 20px;
+  margin-top: 0px;
+}
+.subreddit-title {
+  position: fixed;
+  margin-top: 50px;
+  align-self:flex-start;
 }
 
 .content {
@@ -17,20 +25,25 @@
 
 .subreddit-list-container {
   position: fixed; /* Set the container as fixed */
-  top: 0; /* Position from the top of the viewport */
-  left: 0; /* Position from the left of the viewport */
+  top: 105px; /* Position from the top of the viewport */
+  left: 0px; /* Position from the left of the viewport */
+  overflow-y: auto;
   width: 250px; /* Set a fixed width for the subreddit list */
-  height: 100vh; /* Set the height to cover the entire viewport */
+  height:100%; /* Set the height to cover the entire viewport */
   padding: 10px;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   box-sizing: border-box; /* Include padding and border in the total width */
-  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+  scrollbar-width: none;
+   /* Enable vertical scrolling if content exceeds height */
+}
+.subreddit-list-container::-webkit-scrollbar {
+  display: none; /* Webkit (Chrome, Safari, etc.) */
 }
 
 .post-container {
-  width: 400px; /* Set a fixed width for the post container */
+  width: 750px; /* Set a fixed width for the post container */
   padding: 10px;
-  background-color:gray;
+  background-color:white;
   word-wrap: break-word; 
 }
