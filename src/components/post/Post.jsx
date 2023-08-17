@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import './post.css';
 
 
 const Post = ({ post }) => {
     const {title, image, likes, comments, postedBy, timePosted} = post;
+    console.log("post data", post);
 
 
     return ( 

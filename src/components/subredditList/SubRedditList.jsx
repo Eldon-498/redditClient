@@ -4,7 +4,7 @@ import './subredditList.css';
 
 
 // eslint-disable-next-line react/prop-types
-const SubredditList = ({ subreddits }) => {
+const SubredditList = ({ subreddits, onSubredditClick }) => {
     return ( 
         <div className='subreddit-list'>
             <h2 className='subreddit-list'>Subreddits</h2>
@@ -13,7 +13,7 @@ const SubredditList = ({ subreddits }) => {
                     // eslint-disable-next-line react/prop-types
                     subreddits.map(subreddit =>(
                         <li key={subreddit.displayName}>
-                            <button>
+                            <button onClick={()=> onSubredditClick(subreddit.displayName)}>
                                 {subreddit.title}
                             </button>
 
