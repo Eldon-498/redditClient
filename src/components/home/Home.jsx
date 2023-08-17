@@ -21,11 +21,11 @@ const Home = () => {
       <div className="home-container">        
         <div className='content'>
           <div className='subreddit-list-container'>
-        <SubredditList subreddits = {subReddits} onSubredditClick={handleSubredditClick}/>
+            <SubredditList subreddits = {subReddits} onSubredditClick={handleSubredditClick}/>
           </div>
-        <div className='post-container'>
-        {selectedSubreddit && topPosts.length > 0 && <Post post={topPosts[0]} />}
-        </div>        
+          <div className='post-container'>
+            {selectedSubreddit && topPosts.length > 0 && <Post post={topPosts[0]} />}
+          </div>        
         </div>
       </div>
       </>
