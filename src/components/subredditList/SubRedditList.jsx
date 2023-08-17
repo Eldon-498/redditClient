@@ -1,8 +1,5 @@
 /* eslint-disable no-unused-vars */
 import './subredditList.css';
-
-
-
 // eslint-disable-next-line react/prop-types
 const SubredditList = ({ subreddits, onSubredditClick }) => {
     return ( 
