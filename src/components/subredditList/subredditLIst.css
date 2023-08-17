@@ -1,0 +1,19 @@
+.subreddit-list {
+    flex: 1;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .subreddit-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .subreddit-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .subreddit-list li {
+    margin-bottom: 5px;
+  }
+  
