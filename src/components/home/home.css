@@ -1,27 +1,27 @@
-.home-container {
+.home-container {  
   margin-top: 0px;   
   align-items: center;
   padding: 20px;
   background-color: gray;
-  height: 100vh;
+  height: 100vh; 
   
 }
 
 .home-title {
   margin-top: 0px;
+  width:fit-content; 
+  margin-left: 50%;  
+  background-color: aqua; 
   
 }
 .subreddit-title {
   position: fixed;
-  margin-top: 50px;
-  align-self:flex-start;
+  width: fit-content;
+  top: 72px;
+  margin-top: 0px;  
+  background-color: bisque;
 }
 
-.content {
-  display: flex; /* Use flexbox for layout */
-  align-items:flex-start; 
-  justify-content: space-between;/* Align items to the top of the container */
-}
 
 .subreddit-list-container {
   position: fixed; /* Set the container as fixed */
@@ -43,9 +43,12 @@
 
 .post-container {  
   align-self: auto;
-  width:750px; /* Set a fixed width for the post container */
+  margin-top: 57px;
+  margin-left: 260px;
+  width: calc(100% - 260px);  /* Set a fixed width for the post container */
   padding: 10px;
   background-color:white;
   word-wrap: break-word; 
   overflow-y: auto; 
 }
+

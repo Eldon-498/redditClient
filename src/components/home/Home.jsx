@@ -17,16 +17,18 @@ const Home = () => {
     return (  
       <>      
       <h1 className="home-title">Reddit Client</h1>
-      <h2 className='subreddit-title'>Subreddits</h2>
+      
       <div className="home-container">        
-        <div className='content'>
+        
+        <h2 className='subreddit-title'>Subreddits</h2>
           <div className='subreddit-list-container'>
+          
             <SubredditList subreddits = {subReddits} onSubredditClick={handleSubredditClick}/>
           </div>
           <div className='post-container'>
             {selectedSubreddit && topPosts.length > 0 && <Post post={topPosts[0]} />}
           </div>        
-        </div>
+        
       </div>
       </>
     );
