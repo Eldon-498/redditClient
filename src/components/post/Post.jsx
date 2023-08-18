@@ -5,6 +5,9 @@ import './post.css';
 const Post = ({ post }) => {
     const {title, image, likes, num_comments, author_fullname, timePosted} = post;
     console.log("post data", post);
+    if (!post) {
+        return <div>Loading...</div>;
+    }
     
 
 
