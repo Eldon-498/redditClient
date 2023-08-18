@@ -25,7 +25,8 @@ const Home = () => {
             <SubredditList subreddits = {subReddits} onSubredditClick={handleSubredditClick}/>
           </div>
           <div className='post-container'>
-            {topPosts.map((index,post)=>(
+         
+            {topPosts.map((post, index)=>(
               <Post key={index} post={post}/>
             ))}
        
