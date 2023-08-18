@@ -1,7 +1,7 @@
 .post{
-    align-self: auto;
-    margin-top: 57px;
+    align-self: auto;    
     margin-left: 260px;
+    max-width: 500px;
     width: calc(100% - 260px);  /* Set a fixed width for the post container */
     padding: 10px;
     background-color:white;
@@ -11,4 +11,5 @@
     padding: 10px;
     background-color: white;
     word-wrap: break-word;
+    border-radius: 30px;
 }

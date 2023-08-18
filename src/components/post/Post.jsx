@@ -3,7 +3,7 @@ import './post.css';
 
 
 const Post = ({ post }) => {
-    const {title, image, likes, num_comments, author_fullname, timePosted} = post;
+    const {title, thumbnail, likes, num_comments, author_fullname, timePosted} = post;
     console.log("post data", post);
     if (!post) {
         return <div>Loading...</div>;
@@ -14,7 +14,7 @@ const Post = ({ post }) => {
     return ( 
         <div className='post'>
             <h2>{title}</h2>
-            {image && <img src={image} alt='Post' />}
+            {thumbnail && <img src={thumbnail} alt='Post' />}
             <p>Likes: {likes}</p>
             <p>Comments: {num_comments}</p>
             <p>Posted by: {author_fullname}</p>
