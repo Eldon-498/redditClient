@@ -1,0 +1,14 @@
+.post{
+    align-self: auto;
+    margin-top: 57px;
+    margin-left: 260px;
+    width: calc(100% - 260px);  /* Set a fixed width for the post container */
+    padding: 10px;
+    background-color:white;
+    word-wrap: break-word; 
+    overflow-y: auto; 
+    margin-bottom: 20px; /* Add margin to create space between each post */
+    padding: 10px;
+    background-color: white;
+    word-wrap: break-word;
+}

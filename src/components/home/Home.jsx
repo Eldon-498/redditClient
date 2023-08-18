@@ -21,12 +21,14 @@ const Home = () => {
       <div className="home-container">        
         
         <h2 className='subreddit-title'>Subreddits</h2>
-          <div className='subreddit-list-container'>
-          
+          <div className='subreddit-list-container'>          
             <SubredditList subreddits = {subReddits} onSubredditClick={handleSubredditClick}/>
           </div>
           <div className='post-container'>
-            {selectedSubreddit && topPosts.length > 0 && <Post post={topPosts[0]} />}
+            {topPosts.map((index,post)=>(
+              <Post key={index} post={post}/>
+            ))}
+       
           </div>        
         
       </div>
